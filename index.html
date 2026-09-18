@@ -12,7 +12,6 @@
   h1 { font-size: 1.7rem; margin-bottom: .25rem; }
   h2 { font-size: 1.12rem; margin-top: 2rem; }
   .sub { color: #666; margin-top: 0; }
-  code { background: rgba(127,127,127,.15); padding: .1em .35em; border-radius: 4px; font-size: .92em; }
   ul { padding-left: 1.2rem; }
   footer { margin-top: 3rem; color: #666; font-size: .9rem;
            border-top: 1px solid rgba(127,127,127,.3); padding-top: 1rem; }
@@ -28,19 +27,13 @@
 workstation. It serves exactly one user: its owner. It is not offered to the public — there is no
 sign-up, no third-party users, and no multi-tenant service behind it.</p>
 
-<h2>Why it requests Google account access</h2>
-<p>The agent performs tasks for its owner on the owner's <em>own</em> Google Account, using
-<strong>OAuth 2.0</strong> with the owner's explicit consent. Typical uses:</p>
-<ul>
-  <li><strong>Gmail</strong> — read unread mail and send messages on the owner's behalf (for example a
-      daily morning briefing).</li>
-  <li><strong>Google Calendar</strong> — list upcoming events for scheduling and meeting preparation.</li>
-  <li><strong>Google Drive / Docs / Sheets</strong> — search, read, upload and update the owner's own
-      documents.</li>
-  <li><strong>Contacts</strong> — read-only lookups to resolve names to email addresses.</li>
-</ul>
-<p>OAuth tokens stay on the owner's own device and are never transmitted to any server other than
-Google's own APIs.</p>
+<h2>Why it requests account access</h2>
+<p>The agent performs tasks for its owner on accounts the owner <em>owns</em>, using
+<strong>OAuth 2.0</strong> with the owner's explicit consent — for example assembling a daily
+briefing from the owner's own messages and calendar, or reading and updating a document the owner
+asks about. Access is limited to what a requested task requires, is revocable at any time, and is
+never shared with anyone else. Credentials stay on the owner's own device and are never transmitted
+to any party other than the service the owner connected.</p>
 
 <h2>Privacy</h2>
 <p>No data is collected, aggregated, sold or shared with any third party. See the
